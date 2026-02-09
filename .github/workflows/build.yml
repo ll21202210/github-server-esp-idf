@@ -34,6 +34,7 @@ jobs:
     - name: Building
       run: |
         cd ~/esp
+        . $HOME/esp/esp-idf/export.sh
         cp -r esp-idf/examples/get-started/hello_world .
         cd hello_world
         idf.py build
