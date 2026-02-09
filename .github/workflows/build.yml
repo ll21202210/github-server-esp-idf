@@ -31,12 +31,12 @@ jobs:
         alias get_idf='. $HOME/esp/esp-idf/export.sh'
         sudo usermod -a -G dialout $USER
         
-        - name: Building
-          run: |
-          cd ~/esp
-          cp -r $IDF_PATH/examples/get-started/hello_world .
-          cd hello_world
-          idf.py build
+    - name: Building
+      run: |
+        cd ~/esp
+        cp -r $IDF_PATH/examples/get-started/hello_world .
+        cd hello_world
+        idf.py build
        
     - name: Determine release tag
       id: get_tag
